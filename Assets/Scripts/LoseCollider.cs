@@ -6,11 +6,11 @@ public class LoseCollider : MonoBehaviour {
 	public LevelManager lvlManager;
 
 	private void OnTriggerEnter2D(Collider2D trigger) {
-		print ("trigger");
+		print ("LoseCollider:Trigger()");
 	}
 
 	private void OnCollisionEnter2D(Collision2D collision) {
-		print ("collision");
+		print ("LoseCollider:Collision()");
 		lvlManager.LoadLevel("Lose");
 	}
 }
