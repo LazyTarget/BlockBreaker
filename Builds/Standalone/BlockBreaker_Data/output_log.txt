@@ -1,0 +1,106 @@
+Initialize engine version: 4.7.0f1 (9c73fd3cda99)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: AMD Radeon R9 200 Series (ID=0x67b1)
+    Vendor:   ATI
+    VRAM:     3072 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: E:\Programming\Repos\Unity\Block Breaker\Builds\Standalone\BlockBreaker_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading E:\Programming\Repos\Unity\Block Breaker\Builds\Standalone\BlockBreaker_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: E:\Programming\Repos\Unity\Block Breaker\Builds\Standalone\BlockBreaker_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading E:\Programming\Repos\Unity\Block Breaker\Builds\Standalone\BlockBreaker_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: E:\Programming\Repos\Unity\Block Breaker\Builds\Standalone\BlockBreaker_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading E:\Programming\Repos\Unity\Block Breaker\Builds\Standalone\BlockBreaker_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.064 seconds
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+Platform assembly: E:\Programming\Repos\Unity\Block Breaker\Builds\Standalone\BlockBreaker_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: E:\Programming\Repos\Unity\Block Breaker\Builds\Standalone\BlockBreaker_Data\Managed\System.dll (this message is harmless)
+VolumeButton:Awake() ::10154
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+VolumeButton:Start() ::10154
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+LoadLevel() Name: Level_01
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+UnloadTime: 4.219469 ms
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 309.
+Total: 0.461702 ms (FindLiveObjects: 0.014757 ms CreateObjectMapping: 0.006625 ms MarkObjects: 0.096978 ms  DeleteObjects: 0.009938 ms)
+
+Brick:Collision()
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Brick:Collision() Reached max hits
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Brick:Collision()
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Brick:Collision() Reached max hits
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Brick:Collision()
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Brick:Collision() Reached max hits
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Brick:Collision()
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+LoseCollider:Collision()
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+LoadLevel() Name: Lose
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+UnloadTime: 1.072184 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 144.
+Total: 1.624239 ms (FindLiveObjects: 0.020178 ms CreateObjectMapping: 0.022889 ms MarkObjects: 0.357796 ms  DeleteObjects: 0.037044 ms)
+
+LoadLevel() Name: Start
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+UnloadTime: 0.241542 ms
+VolumeButton:Awake() ::10764
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+MusicPlayer:Awake() Destroying extra instance of MusicPlayer ::10776
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 171.
+Total: 0.382191 ms (FindLiveObjects: 0.006927 ms CreateObjectMapping: 0.005722 ms MarkObjects: 0.109627 ms  DeleteObjects: 0.002108 ms)
+
+VolumeButton:Start() ::10764
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Quit()
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
