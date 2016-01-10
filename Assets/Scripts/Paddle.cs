@@ -15,6 +15,5 @@ public class Paddle : MonoBehaviour {
 		mousePosInBlocks = Mathf.Clamp(mousePosInBlocks, 0.5f, 15.5f);
 		var vector = new Vector3(mousePosInBlocks, this.transform.position.y, this.transform.position.z);
 		this.transform.position = vector;
-		print (mousePosInBlocks);
 	}
 }

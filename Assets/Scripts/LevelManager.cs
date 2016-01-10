@@ -8,6 +8,11 @@ public class LevelManager : MonoBehaviour {
 		Application.LoadLevel(name);
 	}
 
+	public void LoadNextLevel() {
+		Debug.Log("LoadNextLevel() Loaded Level: " + Application.loadedLevelName);
+		Application.LoadLevel(Application.loadedLevel + 1);
+	}
+
 	public void Quit(){
 		Debug.Log("Quit()");
 		Application.Quit();
