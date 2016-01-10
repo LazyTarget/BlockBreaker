@@ -21,8 +21,15 @@ public class Brick : MonoBehaviour {
 	
 	private void OnCollisionEnter2D(Collision2D collision) {
 		print ("Brick:Collision()");
-		timesHit++;
+		if (this.tag != "Breakable") {
+			return;
+		}
 
+		HandleHits();
+	}
+
+	private void HandleHits() {
+		timesHit++;
 		var maxHits = hitSprites.Length + 1;
 		if (timesHit >= maxHits) {
 			print ("Brick:Collision() Reached max hits");
