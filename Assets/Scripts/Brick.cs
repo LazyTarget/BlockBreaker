@@ -10,6 +10,7 @@ public class Brick : MonoBehaviour {
 	private bool isBreakable;
 
 	public Sprite[] hitSprites;
+	public AudioClip crackAudio;
 	
 	// Use this for initialization
 	void Start () {
@@ -29,17 +30,17 @@ public class Brick : MonoBehaviour {
 	
 	private void OnCollisionEnter2D(Collision2D collision) {
 		print ("Brick:Collision()");
-		if (!isBreakable) {
-			return;
-		}
+		AudioSource.PlayClipAtPoint(crackAudio, transform.position);
 
-		HandleHits();
+		if (isBreakable) {
+			HandleHits();
+		}
 	}
 
 	private void HandleHits() {
 		timesHit++;
-		print ("Brick:HandleHits() Times hit: " + timesHit);
 		var maxHits = hitSprites.Length + 1;
+		print ("Brick:HandleHits() Times hit: " + timesHit + "/" + maxHits);
 		if (timesHit >= maxHits) {
 			breakableCount--;
 			print ("Brick:HandleHits() Reached max hits, breakableCount: " + breakableCount);
