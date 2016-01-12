@@ -3,17 +3,36 @@ using System.Collections;
 
 public class Paddle : MonoBehaviour {
 
-	// Use this for initialization
+	private const int WORLD_UNITS = 16;
+
+	public Ball ball;
+	public bool autoPlay = false;
+
 	void Start () {
-	
+		if (ball == null) {
+			ball = GameObject.FindObjectOfType<Ball>();
+		}
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
-		int worldUnits = 16;
-		var mousePosInBlocks = Input.mousePosition.x / Screen.width * worldUnits;
+		if (!ball.Launched || !autoPlay) {
+			MoveWithMouse();
+		} else {
+			AutoMove();
+		}
+	}
+
+	private void MoveWithMouse() {
+		var mousePosInBlocks = Input.mousePosition.x / Screen.width * WORLD_UNITS;
 		mousePosInBlocks = Mathf.Clamp(mousePosInBlocks, 0.5f, 15.5f);
 		var vector = new Vector3(mousePosInBlocks, this.transform.position.y, this.transform.position.z);
+		this.transform.position = vector;
+	}
+
+	private void AutoMove() {
+		var ballPosInBlocks = ball.transform.position.x;
+		ballPosInBlocks = Mathf.Clamp(ballPosInBlocks, 0.5f, 15.5f);
+		var vector = new Vector3(ballPosInBlocks, this.transform.position.y, this.transform.position.z);
 		this.transform.position = vector;
 	}
 }

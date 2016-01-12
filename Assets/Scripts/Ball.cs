@@ -4,6 +4,8 @@ using System.Collections;
 public class Ball : MonoBehaviour {
 	public static int bounces;
 
+	public bool Launched { get { return _launched; } }
+
 	private Paddle _paddle;
 	private bool _launched;
 	private Vector3 _paddleToBallVector;
