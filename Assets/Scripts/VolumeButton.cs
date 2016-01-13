@@ -31,14 +31,26 @@ public class VolumeButton : MonoBehaviour {
 		if (MusicPlayer == null){
 			return;
 		}
-
+		
 		var volumeButton = GetComponent<Image>();
 		//var volumeButton = VolumeButton;
+		/*
 		if (MusicPlayer.audio.mute) {
 			volumeButton.sprite = MuteSprite;
 		} else if (MusicPlayer.audio.volume <= 0) {
 			volumeButton.sprite = NoVolumeSprite;
 		} else if (MusicPlayer.audio.volume <= 0.5) {
+			volumeButton.sprite = LowVolumeSprite;
+		} else {
+			volumeButton.sprite = HighVolumeSprite;
+		}
+		*/
+
+		if (AudioListener.volume <= 0) {
+			volumeButton.sprite = MuteSprite;
+		} else if (AudioListener.volume <= 0) {
+			volumeButton.sprite = NoVolumeSprite;
+		} else if (AudioListener.volume <= 0.5) {
 			volumeButton.sprite = LowVolumeSprite;
 		} else {
 			volumeButton.sprite = HighVolumeSprite;
@@ -51,6 +63,7 @@ public class VolumeButton : MonoBehaviour {
 			return;
 		}
 
+		/*
 		if (MusicPlayer.audio.mute) {
 			MusicPlayer.audio.volume = 0.25f;
 			MusicPlayer.audio.mute = false;
@@ -61,6 +74,17 @@ public class VolumeButton : MonoBehaviour {
 		} else {
 			MusicPlayer.audio.mute = true;
 		}
-		Debug.Log("Music volume: " + MusicPlayer.audio.volume + " (mute=" + MusicPlayer.audio.mute + ")");
+		*/
+
+		if (AudioListener.volume <= 0) {
+			AudioListener.volume = 0.25f;
+		} else if (AudioListener.volume <= 0) {
+			AudioListener.volume = 0.50f;
+		} else if (AudioListener.volume <= 0.5f) {
+			AudioListener.volume = 0.75f;
+		} else {
+			AudioListener.volume = 0;
+		}
+		Debug.Log("Music volume: " + AudioListener.volume + " (mute=" + (AudioListener.volume <= 0) + ")");
 	}
 }

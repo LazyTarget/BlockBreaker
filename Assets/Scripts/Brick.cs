@@ -30,7 +30,8 @@ public class Brick : MonoBehaviour {
 	
 	private void OnCollisionEnter2D(Collision2D collision) {
 		print ("Brick:Collision()");
-		AudioSource.PlayClipAtPoint(crackAudio, transform.position);
+		//AudioSource.PlayClipAtPoint(crackAudio, transform.position);
+		AudioSource.PlayClipAtPoint(crackAudio, transform.position, volume: 0.2f);
 
 		if (isBreakable) {
 			HandleHits();
