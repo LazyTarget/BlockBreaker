@@ -77,13 +77,11 @@ public class VolumeButton : MonoBehaviour {
 		*/
 
 		if (AudioListener.volume <= 0) {
-			AudioListener.volume = 0.25f;
-		} else if (AudioListener.volume <= 0) {
-			AudioListener.volume = 0.50f;
-		} else if (AudioListener.volume <= 0.5f) {
-			AudioListener.volume = 0.75f;
-		} else {
+			AudioListener.volume = 1.0f;
+		} else if (AudioListener.volume <= 0.50f) {
 			AudioListener.volume = 0;
+		} else {
+			AudioListener.volume = 0.50f;
 		}
 		Debug.Log("Music volume: " + AudioListener.volume + " (mute=" + (AudioListener.volume <= 0) + ")");
 	}

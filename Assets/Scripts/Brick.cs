@@ -31,7 +31,7 @@ public class Brick : MonoBehaviour {
 	private void OnCollisionEnter2D(Collision2D collision) {
 		print ("Brick:Collision()");
 		//AudioSource.PlayClipAtPoint(crackAudio, transform.position);
-		AudioSource.PlayClipAtPoint(crackAudio, transform.position, volume: 0.2f);
+		AudioSource.PlayClipAtPoint(crackAudio, transform.position, 0.2f);
 
 		if (isBreakable) {
 			HandleHits();
@@ -44,9 +44,13 @@ public class Brick : MonoBehaviour {
 		print ("Brick:HandleHits() Times hit: " + timesHit + "/" + maxHits);
 		if (timesHit >= maxHits) {
 			breakableCount--;
-			print ("Brick:HandleHits() Reached max hits, breakableCount: " + breakableCount);
+			print ("Brick:HandleHits() Brick destroyed, bricks left: " + breakableCount);
 			Destroy(gameObject);
-			lvlManager.BrickDestroyed ();
+
+			//lvlManager.BrickDestroyed ();
+			if (breakableCount <= 0) {
+				lvlManager.LoadNextLevel();
+			}
 		}
 		else {
 			LoadHitSprite();
