@@ -24,6 +24,8 @@ public class Ball : MonoBehaviour {
 			
 			if (Input.GetMouseButton(0)) {
 				Launch();
+			} else if (Input.GetKeyDown(KeyCode.Space)) {
+				Launch ();
 			}
 		}
 	}

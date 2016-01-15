@@ -5,11 +5,13 @@ public class LevelManager : MonoBehaviour {
 
 	public void LoadLevel (string name) {
 		Debug.Log("LoadLevel() Name: " + name);
+		Brick.breakableCount = 0;
 		Application.LoadLevel(name);
 	}
 
 	public void LoadNextLevel() {
 		Debug.Log("LoadNextLevel() Loaded Level: " + Application.loadedLevelName);
+		Brick.breakableCount = 0;
 		Application.LoadLevel(Application.loadedLevel + 1);
 	}
 

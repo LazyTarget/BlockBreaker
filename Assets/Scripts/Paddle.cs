@@ -16,10 +16,24 @@ public class Paddle : MonoBehaviour {
 
 	void Update () {
 		if (!ball.Launched || !autoPlay) {
-			MoveWithMouse();
+			//MoveWithMouse();
+			MoveWithKeyboard();
 		} else {
 			AutoMove();
 		}
+	}
+
+	private void MoveWithKeyboard() {
+		var speed = 0.2f;
+		var posInBlocks = this.transform.position.x;
+		if (Input.GetKey(KeyCode.LeftArrow)) {
+			posInBlocks -= speed;
+		}
+		if (Input.GetKey(KeyCode.RightArrow)) {
+			posInBlocks += speed;
+		}
+		posInBlocks = Mathf.Clamp(posInBlocks, 0.5f, 15.5f);
+		this.transform.position = new Vector3(posInBlocks, this.transform.position.y, this.transform.position.z);
 	}
 
 	private void MoveWithMouse() {
